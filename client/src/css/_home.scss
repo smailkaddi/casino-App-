@@ -1,0 +1,222 @@
+@import "_variables";
+
+.home {
+  width: 100%;
+  max-width: 400px;
+  flex: 1;
+  position: relative;
+  margin-top: 50px;
+
+  .triangle {
+    position: absolute;
+    transform: translateX(-150px) translateY(50px);
+   
+  }
+
+  .home__item {
+    width: 100px;
+    height: 200px;
+    position: absolute;
+    transition: 0.2s;
+    border: 4px solid;
+
+    &.home__paper {
+      $position-x: 85px;
+      transform: translateX($position-x);
+      border-color: #ec0d2b;
+      &:hover {
+        transform: translateX($position-x) scale(1.2);
+        transition: 0.2s;
+      }
+    }
+
+    &.home__card1 {
+      width: 100px;
+      height: 200px;
+      bottom:0px;
+      $position-x: -562px;
+      transform: translateX($position-x);
+      @include play-item($paper-color);
+      
+      &:hover {
+        transform: translateX($position-x) scale(1.2);
+        transition: 0.2s;
+      }
+    }
+    &.home__card2 {
+      width: 100px;
+      height: 200px;
+      bottom:0px;
+      $position-x: -420px;
+      
+      transform: translateX($position-x);
+      @include play-item($paper-color);
+      &:hover {
+        transform: translateX($position-x) scale(1.2);
+        transition: 0.2s;
+      }
+    }
+    &.home__card3 {
+      width: 100px;
+      height: 200px;
+      bottom:0px;
+      $position-x: -279px;
+      transform: translateX($position-x);
+      @include play-item($paper-color);
+    
+      &:hover {
+        transform: translateX($position-x) scale(1.2);
+        transition: 0.2s;
+      }
+    }
+    &.home__card4 {
+      width: 100px;
+      height: 200px;
+      bottom:0px;
+      $position-x: -138px;
+      transform: translateX($position-x);
+      @include play-item($paper-color);
+      
+      &:hover {
+        transform: translateX($position-x) scale(1.2);
+        transition: 0.2s;
+      }
+    }
+    &.home__card5 {
+      width: 100px;
+      height: 200px;
+      bottom:0px;
+      $position-x: 2px;
+      transform: translateX($position-x);
+      @include play-item($paper-color);
+  
+      &:hover {
+        transform: translateX($position-x) scale(1.2);
+        transition: 0.2s;
+      }
+    }
+    &.home__scissors {
+      $position-x: 211px;
+      transform: translateX($position-x);
+      border-color: #ec0d2b;      
+      &:hover {
+        transform: translateX($position-x) scale(1.2);
+      }
+
+    }
+    &.home__card6 {
+      width: 100px;
+      height: 200px;
+      bottom: 0px;
+      $position-x: 260px;
+      transform: translateX($position-x);
+      @include play-item($scissors-color);
+    
+      &:hover {
+        transform: translateX($position-x) scale(1.2);
+      }
+      
+    }
+
+    &.home__card7 {
+      width: 100px;
+      height: 200px;
+      bottom: 0px;
+      $position-x: 400px;
+      transform: translateX($position-x);
+      @include play-item($scissors-color);
+      
+      &:hover {
+        transform: translateX($position-x) scale(1.2);
+      }
+      
+    }
+
+    &.home__card8 {
+      width: 100px;
+      height: 200px;
+      bottom: 0px;
+      $position-x: 540px;
+      transform: translateX($position-x);
+      @include play-item($scissors-color);
+      
+      &:hover {
+        transform: translateX($position-x) scale(1.2);
+      }
+      
+    }
+    &.home__card9 {
+      width: 100px;
+      height: 200px;
+      bottom: 0px;
+      $position-x: 680px;
+      transform: translateX($position-x);
+      @include play-item($scissors-color);
+    
+      &:hover {
+        transform: translateX($position-x) scale(1.2);
+      }
+      
+    }
+    &.home__card10 {
+      $position-x: 820px;
+      width: 100px;
+      height: 200px;
+      bottom:0px;
+      transform: translateX($position-x);
+      @include play-item($scissors-color);
+      
+      &:hover {
+        transform: translateX($position-x) scale(1.2);
+      }
+      
+    }
+
+
+   
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .home {
+    max-width: 225px;
+
+    .triangle {
+      max-width: 225px;
+      transform: translateX(-120px) translateY(50px);
+    }
+
+    .home__item {
+      width: 90px;
+      height: 90px;
+      border: 8px solid;
+      background-size: 50%;
+      margin-top: 10px;
+
+      &.home__paper {
+        $position-x: -30px;
+        transform: translateX($position-x);
+        &:hover {
+          transform: translateX($position-x) scale(1.2);
+        }
+      }
+
+      &.home__scissors {
+        $position-x: 190px;
+        transform: translateX($position-x);
+        &:hover {
+          transform: translateX($position-x) scale(1.2);
+        }
+      }
+
+      &.home__rock {
+        $position-x: 55px;
+        $position-y: 165px;
+        transform: translateX($position-x) translateY($position-y);
+        &:hover {
+          transform: translateX($position-x) translateY($position-y) scale(1.2);
+        }
+      }
+    }
+  }
+}
